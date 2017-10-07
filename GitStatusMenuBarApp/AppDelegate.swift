@@ -22,7 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    // Function called when menu icon is pushed
+    // Function called when menu icon is pushed˜
     @objc func printQuote(_ sender: Any?) {
         let quoteText = "Never put off until tomorrow what you can do the day after tomorrow."
         let quoteAuthor = "Mark Twain"
