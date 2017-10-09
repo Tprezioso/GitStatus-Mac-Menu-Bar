@@ -14,6 +14,7 @@
 		9F27CDD31F85735B0077A2B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F27CDD11F85735B0077A2B1 /* Main.storyboard */; };
 		9F27CDDF1F85735B0077A2B1 /* GitStatusMenuBarAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27CDDE1F85735B0077A2B1 /* GitStatusMenuBarAppTests.swift */; };
 		9F27CDEA1F85735B0077A2B1 /* GitStatusMenuBarAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27CDE91F85735B0077A2B1 /* GitStatusMenuBarAppUITests.swift */; };
+		9F27CDF91F8B0F590077A2B1 /* GitStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27CDF81F8B0F590077A2B1 /* GitStatusViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9F27CDE91F85735B0077A2B1 /* GitStatusMenuBarAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitStatusMenuBarAppUITests.swift; sourceTree = "<group>"; };
 		9F27CDEB1F85735B0077A2B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F27CDF71F8819F40077A2B1 /* StatusBarButtonImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StatusBarButtonImage@2x.png"; sourceTree = "<group>"; };
+		9F27CDF81F8B0F590077A2B1 /* GitStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitStatusViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				9F27CDC81F85735B0077A2B1 /* AppDelegate.swift */,
+				9F27CDF81F8B0F590077A2B1 /* GitStatusViewController.swift */,
 				9F27CDCA1F85735B0077A2B1 /* ViewController.swift */,
 				9F27CDCF1F85735B0077A2B1 /* Assets.xcassets */,
 				9F27CDD11F85735B0077A2B1 /* Main.storyboard */,
@@ -265,6 +268,7 @@
 				9F27CDCE1F85735B0077A2B1 /* GitStatusMenuBarApp.xcdatamodeld in Sources */,
 				9F27CDCB1F85735B0077A2B1 /* ViewController.swift in Sources */,
 				9F27CDC91F85735B0077A2B1 /* AppDelegate.swift in Sources */,
+				9F27CDF91F8B0F590077A2B1 /* GitStatusViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
