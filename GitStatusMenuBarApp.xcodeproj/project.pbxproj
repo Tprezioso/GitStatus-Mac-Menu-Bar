@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11D94CFCFEADB40DE6109152 /* Pods_GitStatusMenuBarApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C7840C19AB9EB11F30DCB6 /* Pods_GitStatusMenuBarApp.framework */; };
+		1354DEBA21DBEBAB003730F2 /* Pods_GitStatusMenuBarAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FF8D63413544B3242C08B1 /* Pods_GitStatusMenuBarAppUITests.framework */; };
 		9F27CDC91F85735B0077A2B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27CDC81F85735B0077A2B1 /* AppDelegate.swift */; };
 		9F27CDCB1F85735B0077A2B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27CDCA1F85735B0077A2B1 /* ViewController.swift */; };
 		9F27CDCE1F85735B0077A2B1 /* GitStatusMenuBarApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F27CDCC1F85735B0077A2B1 /* GitStatusMenuBarApp.xcdatamodeld */; };
@@ -15,6 +17,7 @@
 		9F27CDDF1F85735B0077A2B1 /* GitStatusMenuBarAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27CDDE1F85735B0077A2B1 /* GitStatusMenuBarAppTests.swift */; };
 		9F27CDEA1F85735B0077A2B1 /* GitStatusMenuBarAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27CDE91F85735B0077A2B1 /* GitStatusMenuBarAppUITests.swift */; };
 		9F27CDF91F8B0F590077A2B1 /* GitStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27CDF81F8B0F590077A2B1 /* GitStatusViewController.swift */; };
+		B1D8CB848F5981FFF6989F6D /* Pods_GitStatusMenuBarAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0293699DD9510BABAE516C9E /* Pods_GitStatusMenuBarAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0293699DD9510BABAE516C9E /* Pods_GitStatusMenuBarAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitStatusMenuBarAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24E9057E09B3D75D8344A10E /* Pods-GitStatusMenuBarAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitStatusMenuBarAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitStatusMenuBarAppUITests/Pods-GitStatusMenuBarAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		47C7840C19AB9EB11F30DCB6 /* Pods_GitStatusMenuBarApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitStatusMenuBarApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F27CDC51F85735B0077A2B1 /* GitStatusMenuBarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitStatusMenuBarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F27CDC81F85735B0077A2B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F27CDCA1F85735B0077A2B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +57,12 @@
 		9F27CDEB1F85735B0077A2B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F27CDF71F8819F40077A2B1 /* StatusBarButtonImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StatusBarButtonImage@2x.png"; sourceTree = "<group>"; };
 		9F27CDF81F8B0F590077A2B1 /* GitStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitStatusViewController.swift; sourceTree = "<group>"; };
+		A194B8BFCC818DBE8DA4CA91 /* Pods-GitStatusMenuBarAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitStatusMenuBarAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitStatusMenuBarAppTests/Pods-GitStatusMenuBarAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		D4FF8D63413544B3242C08B1 /* Pods_GitStatusMenuBarAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitStatusMenuBarAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5A60305C59D620F0068110B /* Pods-GitStatusMenuBarApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitStatusMenuBarApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitStatusMenuBarApp/Pods-GitStatusMenuBarApp.release.xcconfig"; sourceTree = "<group>"; };
+		DA387B2A463F36D71E0C4FF7 /* Pods-GitStatusMenuBarAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitStatusMenuBarAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitStatusMenuBarAppUITests/Pods-GitStatusMenuBarAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E2FA88A258F0E592EE6EEDA4 /* Pods-GitStatusMenuBarApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitStatusMenuBarApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitStatusMenuBarApp/Pods-GitStatusMenuBarApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F53D3C435CD6B705CB235B30 /* Pods-GitStatusMenuBarAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitStatusMenuBarAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitStatusMenuBarAppTests/Pods-GitStatusMenuBarAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11D94CFCFEADB40DE6109152 /* Pods_GitStatusMenuBarApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1D8CB848F5981FFF6989F6D /* Pods_GitStatusMenuBarAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +86,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1354DEBA21DBEBAB003730F2 /* Pods_GitStatusMenuBarAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8BBD61956E8BFA5BC0DB9F00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47C7840C19AB9EB11F30DCB6 /* Pods_GitStatusMenuBarApp.framework */,
+				0293699DD9510BABAE516C9E /* Pods_GitStatusMenuBarAppTests.framework */,
+				D4FF8D63413544B3242C08B1 /* Pods_GitStatusMenuBarAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9F27CDBC1F85735B0077A2B1 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +110,8 @@
 				9F27CDDD1F85735B0077A2B1 /* GitStatusMenuBarAppTests */,
 				9F27CDE81F85735B0077A2B1 /* GitStatusMenuBarAppUITests */,
 				9F27CDC61F85735B0077A2B1 /* Products */,
+				F4069AAE632FDF57CD4D079C /* Pods */,
+				8BBD61956E8BFA5BC0DB9F00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +159,19 @@
 			path = GitStatusMenuBarAppUITests;
 			sourceTree = "<group>";
 		};
+		F4069AAE632FDF57CD4D079C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2FA88A258F0E592EE6EEDA4 /* Pods-GitStatusMenuBarApp.debug.xcconfig */,
+				D5A60305C59D620F0068110B /* Pods-GitStatusMenuBarApp.release.xcconfig */,
+				F53D3C435CD6B705CB235B30 /* Pods-GitStatusMenuBarAppTests.debug.xcconfig */,
+				A194B8BFCC818DBE8DA4CA91 /* Pods-GitStatusMenuBarAppTests.release.xcconfig */,
+				24E9057E09B3D75D8344A10E /* Pods-GitStatusMenuBarAppUITests.debug.xcconfig */,
+				DA387B2A463F36D71E0C4FF7 /* Pods-GitStatusMenuBarAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +179,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F27CDEE1F85735B0077A2B1 /* Build configuration list for PBXNativeTarget "GitStatusMenuBarApp" */;
 			buildPhases = (
+				81440C3E95350988B11D370E /* [CP] Check Pods Manifest.lock */,
 				9F27CDC11F85735B0077A2B1 /* Sources */,
 				9F27CDC21F85735B0077A2B1 /* Frameworks */,
 				9F27CDC31F85735B0077A2B1 /* Resources */,
+				55D57C03EE071A4F65047B36 /* [CP] Embed Pods Frameworks */,
+				8F22B62ED0DC9310285C59AE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,9 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F27CDF11F85735B0077A2B1 /* Build configuration list for PBXNativeTarget "GitStatusMenuBarAppTests" */;
 			buildPhases = (
+				F79A20CC97B94D98D6290561 /* [CP] Check Pods Manifest.lock */,
 				9F27CDD61F85735B0077A2B1 /* Sources */,
 				9F27CDD71F85735B0077A2B1 /* Frameworks */,
 				9F27CDD81F85735B0077A2B1 /* Resources */,
+				D1534C3F4F00117AD21B83B9 /* [CP] Embed Pods Frameworks */,
+				66D2E79DE1F3CDBFF8CE0AEA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -174,9 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F27CDF41F85735B0077A2B1 /* Build configuration list for PBXNativeTarget "GitStatusMenuBarAppUITests" */;
 			buildPhases = (
+				755DE4D5251D26B179A3FB4F /* [CP] Check Pods Manifest.lock */,
 				9F27CDE11F85735B0077A2B1 /* Sources */,
 				9F27CDE21F85735B0077A2B1 /* Frameworks */,
 				9F27CDE31F85735B0077A2B1 /* Resources */,
+				9FC80519F69975B6FBA59A81 /* [CP] Embed Pods Frameworks */,
+				1A3ECECDD53B8366638DDACE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,6 +308,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A3ECECDD53B8366638DDACE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GitStatusMenuBarAppUITests/Pods-GitStatusMenuBarAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55D57C03EE071A4F65047B36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GitStatusMenuBarApp/Pods-GitStatusMenuBarApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66D2E79DE1F3CDBFF8CE0AEA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GitStatusMenuBarAppTests/Pods-GitStatusMenuBarAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		755DE4D5251D26B179A3FB4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		81440C3E95350988B11D370E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8F22B62ED0DC9310285C59AE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GitStatusMenuBarApp/Pods-GitStatusMenuBarApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FC80519F69975B6FBA59A81 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GitStatusMenuBarAppUITests/Pods-GitStatusMenuBarAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1534C3F4F00117AD21B83B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GitStatusMenuBarAppTests/Pods-GitStatusMenuBarAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F79A20CC97B94D98D6290561 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9F27CDC11F85735B0077A2B1 /* Sources */ = {
@@ -423,6 +610,7 @@
 		};
 		9F27CDEF1F85735B0077A2B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2FA88A258F0E592EE6EEDA4 /* Pods-GitStatusMenuBarApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GitStatusMenuBarApp/GitStatusMenuBarApp.entitlements;
@@ -439,6 +627,7 @@
 		};
 		9F27CDF01F85735B0077A2B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5A60305C59D620F0068110B /* Pods-GitStatusMenuBarApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GitStatusMenuBarApp/GitStatusMenuBarApp.entitlements;
@@ -455,6 +644,7 @@
 		};
 		9F27CDF21F85735B0077A2B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F53D3C435CD6B705CB235B30 /* Pods-GitStatusMenuBarAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -472,6 +662,7 @@
 		};
 		9F27CDF31F85735B0077A2B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A194B8BFCC818DBE8DA4CA91 /* Pods-GitStatusMenuBarAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -489,6 +680,7 @@
 		};
 		9F27CDF51F85735B0077A2B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24E9057E09B3D75D8344A10E /* Pods-GitStatusMenuBarAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -505,6 +697,7 @@
 		};
 		9F27CDF61F85735B0077A2B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA387B2A463F36D71E0C4FF7 /* Pods-GitStatusMenuBarAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
