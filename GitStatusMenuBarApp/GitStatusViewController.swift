@@ -16,6 +16,7 @@ class GitStatusViewController: NSViewController {
     }
     
 }
+
 extension GitStatusViewController {
     // MARK: Storyboard instantiation
     static func freshController() -> GitStatusViewController {
