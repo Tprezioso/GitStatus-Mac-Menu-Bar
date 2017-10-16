@@ -700,6 +700,9 @@
                             </textField>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="statusLabel" destination="IOZ-Fh-Z9y" id="U4d-3V-wJx"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

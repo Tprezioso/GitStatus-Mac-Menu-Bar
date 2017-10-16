@@ -7,12 +7,15 @@
 //
 
 import Cocoa
+import Alamofire
 
 class GitStatusViewController: NSViewController {
-
+    @IBOutlet var statusLabel: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        self.statusLabel.stringValue = "hello"
     }
     
 }
