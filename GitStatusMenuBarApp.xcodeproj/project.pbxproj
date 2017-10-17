@@ -129,14 +129,12 @@
 			isa = PBXGroup;
 			children = (
 				9F27CDC81F85735B0077A2B1 /* AppDelegate.swift */,
-				9F27CDF81F8B0F590077A2B1 /* GitStatusViewController.swift */,
-				9F27CDCA1F85735B0077A2B1 /* ViewController.swift */,
-				9F27CDCF1F85735B0077A2B1 /* Assets.xcassets */,
-				9F27CDD11F85735B0077A2B1 /* Main.storyboard */,
+				9F4B40141F9695E700FC447C /* ViewControllers */,
+				9F4B40151F9695FF00FC447C /* View */,
+				9F4B40161F96961F00FC447C /* Images */,
 				9F27CDD41F85735B0077A2B1 /* Info.plist */,
-				9F27CDF71F8819F40077A2B1 /* StatusBarButtonImage@2x.png */,
-				9F27CDD51F85735B0077A2B1 /* GitStatusMenuBarApp.entitlements */,
 				9F27CDCC1F85735B0077A2B1 /* GitStatusMenuBarApp.xcdatamodeld */,
+				9F27CDD51F85735B0077A2B1 /* GitStatusMenuBarApp.entitlements */,
 			);
 			path = GitStatusMenuBarApp;
 			sourceTree = "<group>";
@@ -157,6 +155,32 @@
 				9F27CDEB1F85735B0077A2B1 /* Info.plist */,
 			);
 			path = GitStatusMenuBarAppUITests;
+			sourceTree = "<group>";
+		};
+		9F4B40141F9695E700FC447C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F27CDF81F8B0F590077A2B1 /* GitStatusViewController.swift */,
+				9F27CDCA1F85735B0077A2B1 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9F4B40151F9695FF00FC447C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F27CDD11F85735B0077A2B1 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F4B40161F96961F00FC447C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				9F27CDCF1F85735B0077A2B1 /* Assets.xcassets */,
+				9F27CDF71F8819F40077A2B1 /* StatusBarButtonImage@2x.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		F4069AAE632FDF57CD4D079C /* Pods */ = {
