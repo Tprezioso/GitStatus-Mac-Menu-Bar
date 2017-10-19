@@ -15,7 +15,6 @@ class GitStatusViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        self.statusLabel.stringValue = "hello"
         api()
     }
     
@@ -26,13 +25,15 @@ class GitStatusViewController: NSViewController {
 //            self.view.addSubview(hud)
             if let JSON = response.result.value {
                 let data = JSON as? [String: Any]
-                let status = data?["status"] as! String?
+                var status = data?["status"] as! String?
 //                self.statusLabel.text = " Status: \(status!.capitalizingFirstLetter())"
                 let date = data?["last_updated"] as! String?
                 print("\(data!)")
                 print("\(date!)")
                 print("\(status!)")
-                //                self.setBackGroundColorForStatus(status: status!)
+                
+                self.statusLabel.stringValue = " Status: \(status!.capitalizingFirstLetter())"
+//                self.setBackGroundColorForStatus(status: status!)
 //                self.lastUpdatedLabel.text = self.getDateFromJSONDate(dateString: date!)
 //                hud.hide(afterDelay: 0.5)
             }
