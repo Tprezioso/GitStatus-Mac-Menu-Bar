@@ -26,7 +26,6 @@ class GitStatusViewController: NSViewController {
             if let JSON = response.result.value {
                 let data = JSON as? [String: Any]
                 var status = data?["status"] as! String?
-//                self.statusLabel.text = " Status: \(status!.capitalizingFirstLetter())"
                 let date = data?["last_updated"] as! String?
                 print("\(data!)")
                 print("\(date!)")
