@@ -17,6 +17,25 @@ class GitStatusViewController: NSViewController {
         // Do view setup here.
         api()
     }
+
+    // MARK: - Convert date methods
+    
+    func takeStringFromBeginning(stringToCut:String ,start: Int, end: Int) -> String {
+        let startIndex = stringToCut.index(stringToCut.startIndex, offsetBy: start)
+        let endIndex = stringToCut.index(stringToCut.startIndex, offsetBy: end)
+        
+        return String(stringToCut[startIndex...endIndex])
+    }
+    
+    func getDateFromJSONDate(dateString: String) -> String {
+        let day = takeStringFromBeginning(stringToCut: dateString, start: 8, end: 9)
+        let month = takeStringFromBeginning(stringToCut: dateString, start: 5, end: 6)
+        let year = takeStringFromBeginning(stringToCut: dateString, start: 0, end: 3)
+        
+        return "Last Updated\n\(month)/\(day)/\(year)"
+    }
+
+    // Mark: - API call
     
     func api() {
 //        let hud = BXHUD.showProgress("Loading")
@@ -25,13 +44,15 @@ class GitStatusViewController: NSViewController {
 //            self.view.addSubview(hud)
             if let JSON = response.result.value {
                 let data = JSON as? [String: Any]
-                var status = data?["status"] as! String?
+                let status = data?["status"] as! String?
                 let date = data?["last_updated"] as! String?
                 print("\(data!)")
+                let dateChangedToStanderedTime = self.getDateFromJSONDate(dateString: date!)
+                print("\(dateChangedToStanderedTime)")
                 print("\(date!)")
                 print("\(status!)")
                 
-                self.statusLabel.stringValue = " Status: \(status!.capitalizingFirstLetter())"
+                self.statusLabel.stringValue = "\(dateChangedToStanderedTime) \n Status: \(status!.capitalizingFirstLetter())"
 //                self.setBackGroundColorForStatus(status: status!)
 //                self.lastUpdatedLabel.text = self.getDateFromJSONDate(dateString: date!)
 //                hud.hide(afterDelay: 0.5)
