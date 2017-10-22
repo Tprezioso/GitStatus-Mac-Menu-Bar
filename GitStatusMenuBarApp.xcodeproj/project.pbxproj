@@ -133,6 +133,7 @@
 				9F27CDC81F85735B0077A2B1 /* AppDelegate.swift */,
 				9F4B40141F9695E700FC447C /* ViewControllers */,
 				9F4B40151F9695FF00FC447C /* View */,
+				9FE3DB2C1F9D365D000C0B97 /* Modal */,
 				9F4B40161F96961F00FC447C /* Images */,
 				9F27CDD41F85735B0077A2B1 /* Info.plist */,
 				9F27CDCC1F85735B0077A2B1 /* GitStatusMenuBarApp.xcdatamodeld */,
@@ -172,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				9F27CDD11F85735B0077A2B1 /* Main.storyboard */,
-				9FE3DB2A1F9D3445000C0B97 /* EventMonitor.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +184,14 @@
 				9F27CDF71F8819F40077A2B1 /* StatusBarButtonImage@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		9FE3DB2C1F9D365D000C0B97 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				9FE3DB2A1F9D3445000C0B97 /* EventMonitor.swift */,
+			);
+			path = Modal;
 			sourceTree = "<group>";
 		};
 		F4069AAE632FDF57CD4D079C /* Pods */ = {

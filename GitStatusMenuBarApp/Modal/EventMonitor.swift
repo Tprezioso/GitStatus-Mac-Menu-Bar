@@ -8,6 +8,8 @@
 
 import Cocoa
 
+// This class is used from when you want the menu bar app to close when clicked outside of view
+
 public class EventMonitor {
     private var monitor: Any?
     private let mask: NSEvent.EventTypeMask
