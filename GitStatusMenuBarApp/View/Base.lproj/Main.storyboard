@@ -686,11 +686,11 @@
             <objects>
                 <viewController storyboardIdentifier="GitStatusViewController" id="XfG-lQ-9wD" customClass="GitStatusViewController" customModule="GitStatusMenuBarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="210" height="84"/>
+                        <rect key="frame" x="0.0" y="0.0" width="183" height="121"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IOZ-Fh-Z9y">
-                                <rect key="frame" x="18" y="13" width="174" height="59"/>
+                                <rect key="frame" x="4" y="49" width="174" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="charWrapping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="Gc9-az-0KP">
                                     <font key="font" metaFont="system"/>
@@ -698,6 +698,14 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3QF-Dj-xHO">
+                                <rect key="frame" x="31" y="5" width="121" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Check Status" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gPs-mj-KLs">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -706,7 +714,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="210" y="562"/>
+            <point key="canvasLocation" x="223.5" y="580.5"/>
         </scene>
     </scenes>
 </document>

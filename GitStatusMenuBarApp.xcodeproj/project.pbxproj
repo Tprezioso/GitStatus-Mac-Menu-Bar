@@ -17,6 +17,7 @@
 		9F27CDDF1F85735B0077A2B1 /* GitStatusMenuBarAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27CDDE1F85735B0077A2B1 /* GitStatusMenuBarAppTests.swift */; };
 		9F27CDEA1F85735B0077A2B1 /* GitStatusMenuBarAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27CDE91F85735B0077A2B1 /* GitStatusMenuBarAppUITests.swift */; };
 		9F27CDF91F8B0F590077A2B1 /* GitStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27CDF81F8B0F590077A2B1 /* GitStatusViewController.swift */; };
+		9FE3DB2B1F9D3445000C0B97 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE3DB2A1F9D3445000C0B97 /* EventMonitor.swift */; };
 		B1D8CB848F5981FFF6989F6D /* Pods_GitStatusMenuBarAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0293699DD9510BABAE516C9E /* Pods_GitStatusMenuBarAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		9F27CDEB1F85735B0077A2B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F27CDF71F8819F40077A2B1 /* StatusBarButtonImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StatusBarButtonImage@2x.png"; sourceTree = "<group>"; };
 		9F27CDF81F8B0F590077A2B1 /* GitStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitStatusViewController.swift; sourceTree = "<group>"; };
+		9FE3DB2A1F9D3445000C0B97 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		A194B8BFCC818DBE8DA4CA91 /* Pods-GitStatusMenuBarAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitStatusMenuBarAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitStatusMenuBarAppTests/Pods-GitStatusMenuBarAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		D4FF8D63413544B3242C08B1 /* Pods_GitStatusMenuBarAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitStatusMenuBarAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5A60305C59D620F0068110B /* Pods-GitStatusMenuBarApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitStatusMenuBarApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitStatusMenuBarApp/Pods-GitStatusMenuBarApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				9F27CDD11F85735B0077A2B1 /* Main.storyboard */,
+				9FE3DB2A1F9D3445000C0B97 /* EventMonitor.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F27CDCE1F85735B0077A2B1 /* GitStatusMenuBarApp.xcdatamodeld in Sources */,
+				9FE3DB2B1F9D3445000C0B97 /* EventMonitor.swift in Sources */,
 				9F27CDCB1F85735B0077A2B1 /* ViewController.swift in Sources */,
 				9F27CDC91F85735B0077A2B1 /* AppDelegate.swift in Sources */,
 				9F27CDF91F8B0F590077A2B1 /* GitStatusViewController.swift in Sources */,

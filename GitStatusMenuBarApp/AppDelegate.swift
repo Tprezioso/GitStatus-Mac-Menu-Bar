@@ -13,6 +13,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     let statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
     let popover = NSPopover()
+    var eventMonitor: EventMonitor?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         if let button = statusItem.button {
@@ -20,8 +21,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.action = #selector(togglePopover(_:))
         }
         popover.contentViewController = GitStatusViewController.freshController()
+        
+        // Event Monitor is used to close app once you click outside the view
+        eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [weak self] event in
+            if let strongSelf = self, strongSelf.popover.isShown {
+                strongSelf.closePopover(sender: event)
+            }
+        }
     }
    
+    
     @objc func togglePopover(_ sender: Any?) {
         if popover.isShown {
             closePopover(sender: sender)
@@ -34,10 +43,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let button = statusItem.button {
             popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
         }
+        eventMonitor?.start()
     }
     
     func closePopover(sender: Any?) {
         popover.performClose(sender)
+        eventMonitor?.stop()
     }
     
     // Function called when menu icon is pushed˜
@@ -51,7 +62,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
+        
     }
+
 
     // MARK: - Core Data stack
 
