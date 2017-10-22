@@ -51,20 +51,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         eventMonitor?.stop()
     }
     
-    // Function called when menu icon is pushed˜
-    @objc func printQuote(_ sender: Any?) {
-        let quoteText = "Never put off until tomorrow what you can do the day after tomorrow."
-        let quoteAuthor = "Mark Twain"
-        
-        print("\(quoteText) — \(quoteAuthor)")
-    }
-    
-
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
-        
     }
-
 
     // MARK: - Core Data stack
 
