@@ -29,7 +29,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
     }
-   
+    
+    // Mark: - Used for toggling a popover view for menu bar app
     
     @objc func togglePopover(_ sender: Any?) {
         if popover.isShown {
