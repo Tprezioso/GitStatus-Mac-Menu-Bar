@@ -59,6 +59,10 @@ class GitStatusViewController: NSViewController {
             }
         }
     }
+
+    @IBAction func detailedStatusButton(_ sender: Any) {
+        
+    }
 }
 
 extension GitStatusViewController {

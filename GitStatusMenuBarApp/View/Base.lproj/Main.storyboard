@@ -699,12 +699,15 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3QF-Dj-xHO">
-                                <rect key="frame" x="31" y="5" width="121" height="32"/>
+                                <rect key="frame" x="25" y="5" width="133" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Check Status" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gPs-mj-KLs">
+                                <buttonCell key="cell" type="push" title="Detailed Status" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gPs-mj-KLs">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="detailedStatusButton:" target="XfG-lQ-9wD" id="Q76-F4-Jwg"/>
+                                </connections>
                             </button>
                         </subviews>
                     </view>
