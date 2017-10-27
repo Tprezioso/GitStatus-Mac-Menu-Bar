@@ -61,7 +61,9 @@ class GitStatusViewController: NSViewController {
     }
 
     @IBAction func detailedStatusButton(_ sender: Any) {
-        
+        if let url = URL(string: "https://status.github.com/messages"), NSWorkspace.shared.open(url){
+            print("opened in default browser")
+        }
     }
 }
 
