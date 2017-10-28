@@ -53,9 +53,6 @@ class GitStatusViewController: NSViewController {
                 print("\(status!)")
                 
                 self.statusLabel.stringValue = "\(dateChangedToStanderedTime) \n Status: \(status!.capitalizingFirstLetter())"
-//                self.setBackGroundColorForStatus(status: status!)
-//                self.lastUpdatedLabel.text = self.getDateFromJSONDate(dateString: date!)
-//                hud.hide(afterDelay: 0.5)
             }
         }
     }
