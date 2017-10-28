@@ -61,6 +61,8 @@ class GitStatusViewController: NSViewController {
         if let url = URL(string: "https://status.github.com/messages"), NSWorkspace.shared.open(url){
             print("opened in default browser")
         }
+        // Used to close app once the button is pressed and you a brought to website
+        NSApplication.shared.terminate(sender)
     }
 }
 
