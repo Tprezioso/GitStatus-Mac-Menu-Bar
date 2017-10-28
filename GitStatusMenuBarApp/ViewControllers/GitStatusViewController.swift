@@ -9,6 +9,34 @@
 import Cocoa
 import Alamofire
 
+extension GitStatusViewController {
+    // MARK: Storyboard instantiation
+    static func freshController() -> GitStatusViewController {
+        //1.
+        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
+        //2.
+        let identifier = NSStoryboard.SceneIdentifier(rawValue: "GitStatusViewController")
+        //3.
+        guard let viewcontroller = storyboard.instantiateController(withIdentifier: identifier) as? GitStatusViewController else {
+            fatalError("Why cant i find QuotesViewController? - Check Main.storyboard")
+        }
+        return viewcontroller
+    }
+}
+
+extension String {
+    func capitalizingFirstLetter() -> String {
+        let first = String(characters.prefix(1)).capitalized
+        let other = String(characters.dropFirst())
+        
+        return first + other
+    }
+    
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
+    }
+}
+
 class GitStatusViewController: NSViewController {
     @IBOutlet var statusLabel: NSTextField!
     
@@ -62,36 +90,11 @@ class GitStatusViewController: NSViewController {
             print("opened in default browser")
         }
         // Used to close app once the button is pressed and you a brought to website
-        //NSApplication.shared.terminate(sender)
         let appdelegate = NSApplication.shared.delegate as! AppDelegate
         appdelegate.closePopover(sender: sender)
     }
 }
 
-extension GitStatusViewController {
-    // MARK: Storyboard instantiation
-    static func freshController() -> GitStatusViewController {
-        //1.
-        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
-        //2.
-        let identifier = NSStoryboard.SceneIdentifier(rawValue: "GitStatusViewController")
-        //3.
-        guard let viewcontroller = storyboard.instantiateController(withIdentifier: identifier) as? GitStatusViewController else {
-            fatalError("Why cant i find QuotesViewController? - Check Main.storyboard")
-        }
-        return viewcontroller
-    }
-}
-
-extension String {
-    func capitalizingFirstLetter() -> String {
-        let first = String(characters.prefix(1)).capitalized
-        let other = String(characters.dropFirst())
-        
-        return first + other
-    }
-    
-    mutating func capitalizeFirstLetter() {
-        self = self.capitalizingFirstLetter()
-    }
-}
+//    func quitApplication() {
+//        NSApplication.shared.terminate(sender)
+//    }
