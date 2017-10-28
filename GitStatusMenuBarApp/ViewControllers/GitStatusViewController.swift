@@ -62,7 +62,9 @@ class GitStatusViewController: NSViewController {
             print("opened in default browser")
         }
         // Used to close app once the button is pressed and you a brought to website
-        NSApplication.shared.terminate(sender)
+        //NSApplication.shared.terminate(sender)
+        let appdelegate = NSApplication.shared.delegate as! AppDelegate
+        appdelegate.closePopover(sender: sender)
     }
 }
 
