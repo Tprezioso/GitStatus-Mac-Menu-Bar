@@ -39,7 +39,6 @@ extension String {
 
 class GitStatusViewController: NSViewController {
     @IBOutlet var statusLabel: NSTextField!
-    let callAPI = APICall()
     var dataforstring = ""
     
     override func viewDidLoad() {
