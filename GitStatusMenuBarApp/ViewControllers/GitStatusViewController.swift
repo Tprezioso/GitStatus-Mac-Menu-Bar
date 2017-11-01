@@ -39,16 +39,12 @@ extension String {
 
 class GitStatusViewController: NSViewController {
     @IBOutlet var statusLabel: NSTextField!
-    var dataforstring = ""
+    var dataFromAPI = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        APICall.getContracts(completion: { data in
-            self.dataforstring = data
-            print(self.dataforstring)
-        })
-//        api()
+        api()
     }
 
     // MARK: - Convert date methods
@@ -70,22 +66,12 @@ class GitStatusViewController: NSViewController {
 
     // Mark: - API call
     
-//    func api() {
-//        Alamofire.request("https://status.github.com/api/status.json").responseJSON { response in
-//            if let JSON = response.result.value {
-//                let data = JSON as? [String: Any]
-//                let status = data?["status"] as! String?
-//                let date = data?["last_updated"] as! String?
-//                print("\(data!)")
-//                let dateChangedToStanderedTime = self.getDateFromJSONDate(dateString: date!)
-//                print("\(dateChangedToStanderedTime)")
-//                print("\(date!)")
-//                print("\(status!)")
-//                
-//                self.statusLabel.stringValue = "\(dateChangedToStanderedTime) \n Status: \(status!.capitalizingFirstLetter())"
-//            }
-//        }
-//    }
+    func api() {
+        APICall.getContracts(completion: { data in
+            self.dataFromAPI = data
+            print(self.dataFromAPI[0])
+        })
+    }
 
     @IBAction func detailedStatusButton(_ sender: Any) {
         if let url = URL(string: "https://status.github.com/messages"), NSWorkspace.shared.open(url){
