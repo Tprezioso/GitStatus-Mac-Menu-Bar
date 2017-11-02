@@ -28,12 +28,6 @@ class APICall: NSObject {
                     gitStatusData.append(statusFromData!)
                     gitStatusData.append(dateFromData!)
                 }
-//                let json = response.result.value
-//                var contracts = [String]()
-//                for data in json["data"].arrayValue {
-//                    let contract = Contract(json: data)
-//                    contracts.append(contract)
-//                }
                 completion(gitStatusData)
                 
             case .failure(let error):
@@ -42,19 +36,4 @@ class APICall: NSObject {
             }
         })
     }
-//    func api() -> String {
-//        var love = ""
-//
-//        Alamofire.request("https://status.github.com/api/status.json").responseJSON { response in
-//            if let JSON = response.result.value {
-//                let data = JSON as? [String: Any]
-//                let statusFromData = data?["status"] as! String?
-//                let dateFromData = data?["last_updated"] as! String?
-//                print("\(dateFromData!)")
-//                print("\(statusFromData!)")
-//                love = statusFromData!
-//            }
-//        }
-//        return love
-//    }
 }
