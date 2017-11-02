@@ -64,11 +64,19 @@ class GitStatusViewController: NSViewController {
         return "Last Updated\n\(month)/\(day)/\(year)"
     }
 
+    // MARK : - Setup of Display label
+    func setupDiplayLabel() {
+        let date = self.dataFromAPI[1]
+        let status = self.dataFromAPI[0]
+        self.statusLabel.stringValue = "\(getDateFromJSONDate(dateString: date))\n Status: \(status.capitalizingFirstLetter())"
+    }
+
     // Mark: - API call
     
     func api() {
         APICall.getContracts(completion: { data in
             self.dataFromAPI = data
+            self.setupDiplayLabel()
             print(self.dataFromAPI[0])
         })
     }
