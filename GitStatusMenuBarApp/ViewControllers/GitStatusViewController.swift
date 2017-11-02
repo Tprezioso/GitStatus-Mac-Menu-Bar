@@ -18,7 +18,7 @@ extension GitStatusViewController {
         let identifier = NSStoryboard.SceneIdentifier(rawValue: "GitStatusViewController")
         //3.
         guard let viewcontroller = storyboard.instantiateController(withIdentifier: identifier) as? GitStatusViewController else {
-            fatalError("Why cant i find QuotesViewController? - Check Main.storyboard")
+            fatalError("Why cant i find GitStatusViewController? - Check Main.storyboard")
         }
         return viewcontroller
     }
@@ -74,7 +74,6 @@ class GitStatusViewController: NSViewController {
         APICall.getContracts(completion: { data in
             self.dataFromAPI = data
             self.setupDiplayLabel()
-            print(self.dataFromAPI[0])
         })
     }
 

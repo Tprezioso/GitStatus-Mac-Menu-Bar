@@ -23,8 +23,6 @@ class APICall: NSObject {
                     let data = JSON as? [String: Any]
                     let statusFromData = data?["status"] as! String?
                     let dateFromData = data?["last_updated"] as! String?
-//                    print("\(dateFromData!)")
-//                    print("\(statusFromData!)")
                     gitStatusData.append(statusFromData!)
                     gitStatusData.append(dateFromData!)
                 }
