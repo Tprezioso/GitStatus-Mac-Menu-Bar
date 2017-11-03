@@ -75,7 +75,7 @@ class GitStatusViewController: NSViewController {
             self.setupDiplayLabel()
         })
     }
-
+    
     @IBAction func detailedStatusButton(_ sender: Any) {
         if let url = URL(string: "https://status.github.com/messages"), NSWorkspace.shared.open(url){
             print("opened in default browser")
@@ -84,8 +84,10 @@ class GitStatusViewController: NSViewController {
         let appdelegate = NSApplication.shared.delegate as! AppDelegate
         appdelegate.closePopover(sender: sender)
     }
+
+    @IBAction func quitAppBiutton(_ sender: Any) {
+        NSApplication.shared.terminate(sender)
+    }
 }
 
-//    func quitApplication() {
-//        NSApplication.shared.terminate(sender)
-//    }
+
