@@ -44,7 +44,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let button = statusItem.button {
             popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
             
-            // Line below is used to refresh the viewcontroller when toggled on and off for api call
+            // Line below is used to refresh the viewcontroller when toggled on and off for api call                            
             popover.contentViewController = GitStatusViewController.freshController()
         }
         eventMonitor?.start()

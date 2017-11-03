@@ -9,6 +9,7 @@
 import Cocoa
 import Alamofire
 
+    // MARK: - Extension(s)
 extension GitStatusViewController {
     // MARK: Storyboard instantiation
     static func freshController() -> GitStatusViewController {
@@ -34,6 +35,7 @@ extension String {
     }
 }
 
+    // MARK: - Start of Class
 class GitStatusViewController: NSViewController {
     @IBOutlet var statusLabel: NSTextField!
     var dataFromAPI = [String]()
@@ -67,7 +69,7 @@ class GitStatusViewController: NSViewController {
         self.statusLabel.stringValue = "\(getDateFromJSONDate(dateString: date))\n Status: \(status.capitalizingFirstLetter())"
     }
 
-    // Mark: - API call
+    // MARK: - API call
     
     func api() {
         APICall.getContracts(completion: { data in
@@ -75,6 +77,8 @@ class GitStatusViewController: NSViewController {
             self.setupDiplayLabel()
         })
     }
+    
+    // MARK: - Action Button(s)
     
     @IBAction func detailedStatusButton(_ sender: Any) {
         if let url = URL(string: "https://status.github.com/messages"), NSWorkspace.shared.open(url){
