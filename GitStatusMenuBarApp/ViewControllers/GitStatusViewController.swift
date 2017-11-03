@@ -35,7 +35,7 @@ extension String {
     }
 }
 
-    // MARK: - Start of Class
+    // MARK: - ViewController
 class GitStatusViewController: NSViewController {
     @IBOutlet var statusLabel: NSTextField!
     var dataFromAPI = [String]()
@@ -93,5 +93,4 @@ class GitStatusViewController: NSViewController {
         NSApplication.shared.terminate(sender)
     }
 }
-
 
