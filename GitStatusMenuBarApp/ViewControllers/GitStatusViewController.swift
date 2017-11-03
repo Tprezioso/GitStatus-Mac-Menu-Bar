@@ -40,7 +40,6 @@ class GitStatusViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
         api()
     }
 
