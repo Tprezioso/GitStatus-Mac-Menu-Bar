@@ -10,7 +10,6 @@
 		11D94CFCFEADB40DE6109152 /* Pods_GitStatusMenuBarApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C7840C19AB9EB11F30DCB6 /* Pods_GitStatusMenuBarApp.framework */; };
 		1354DEBA21DBEBAB003730F2 /* Pods_GitStatusMenuBarAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FF8D63413544B3242C08B1 /* Pods_GitStatusMenuBarAppUITests.framework */; };
 		9F27CDC91F85735B0077A2B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27CDC81F85735B0077A2B1 /* AppDelegate.swift */; };
-		9F27CDCB1F85735B0077A2B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27CDCA1F85735B0077A2B1 /* ViewController.swift */; };
 		9F27CDCE1F85735B0077A2B1 /* GitStatusMenuBarApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F27CDCC1F85735B0077A2B1 /* GitStatusMenuBarApp.xcdatamodeld */; };
 		9F27CDD01F85735B0077A2B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F27CDCF1F85735B0077A2B1 /* Assets.xcassets */; };
 		9F27CDD31F85735B0077A2B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F27CDD11F85735B0077A2B1 /* Main.storyboard */; };
@@ -46,7 +45,6 @@
 		47C7840C19AB9EB11F30DCB6 /* Pods_GitStatusMenuBarApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitStatusMenuBarApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F27CDC51F85735B0077A2B1 /* GitStatusMenuBarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitStatusMenuBarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F27CDC81F85735B0077A2B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9F27CDCA1F85735B0077A2B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9F27CDCD1F85735B0077A2B1 /* GitStatusMenuBarApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GitStatusMenuBarApp.xcdatamodel; sourceTree = "<group>"; };
 		9F27CDCF1F85735B0077A2B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F27CDD21F85735B0077A2B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				9F27CDF81F8B0F590077A2B1 /* GitStatusViewController.swift */,
-				9F27CDCA1F85735B0077A2B1 /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -497,7 +494,6 @@
 				9F27CDCE1F85735B0077A2B1 /* GitStatusMenuBarApp.xcdatamodeld in Sources */,
 				9FE3DB2B1F9D3445000C0B97 /* EventMonitor.swift in Sources */,
 				9F93F4B01FA5712000A9C0D1 /* APICall.swift in Sources */,
-				9F27CDCB1F85735B0077A2B1 /* ViewController.swift in Sources */,
 				9F27CDC91F85735B0077A2B1 /* AppDelegate.swift in Sources */,
 				9F27CDF91F8B0F590077A2B1 /* GitStatusViewController.swift in Sources */,
 			);
