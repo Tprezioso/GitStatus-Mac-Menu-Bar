@@ -43,6 +43,7 @@ class GitStatusViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         api()
+        checkConnectionToInternet()
     }
 
     // MARK: - Convert date methods
@@ -64,9 +65,13 @@ class GitStatusViewController: NSViewController {
 
     // MARK : - Setup of Display label
     func setupDiplayLabel() {
+        if self.dataFromAPI[0] == "No Internet" {
+            self.statusLabel.stringValue = self.dataFromAPI[0]
+        } else {
         let date = self.dataFromAPI[1]
         let status = self.dataFromAPI[0]
         self.statusLabel.stringValue = "\(getDateFromJSONDate(dateString: date))\n Status: \(status.capitalizingFirstLetter())"
+        }
     }
 
     // MARK: - API call
@@ -76,6 +81,23 @@ class GitStatusViewController: NSViewController {
             self.dataFromAPI = data
             self.setupDiplayLabel()
         })
+    }
+    
+    // MARK: - Check for internet connection using Reachability
+    
+    func checkConnectionToInternet() {
+//        guard let status = Network.reachability?.status else { return }
+//        switch status {
+//        case .unreachable:
+//            print("Unreachable")
+//        case .wifi:
+//            print("WIFI is connected")
+//        case .wwan:
+//            print("this is working?")
+//        }
+        let reachable = Network.reachability?.isConnectedToNetwork
+        print(reachable ?? "no bueno")
+        
     }
     
     // MARK: - Action Button(s)

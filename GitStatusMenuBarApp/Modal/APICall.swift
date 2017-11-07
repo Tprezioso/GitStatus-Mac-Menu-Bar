@@ -27,7 +27,8 @@ class APICall: NSObject {
                 
             case .failure(let error):
                 print(error)
-                completion(["fuck"])
+                let gitStatusFailure = "No Internet"
+                completion([gitStatusFailure])
             }
         })
     }
