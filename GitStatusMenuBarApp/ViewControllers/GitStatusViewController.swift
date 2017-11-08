@@ -11,6 +11,7 @@ import Alamofire
 
     // MARK: - Extension(s)
 extension GitStatusViewController {
+
     // MARK: Storyboard instantiation
     static func freshController() -> GitStatusViewController {
         //1.
