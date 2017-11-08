@@ -36,6 +36,7 @@ extension String {
 }
 
     // MARK: - ViewController
+
 class GitStatusViewController: NSViewController {
     @IBOutlet var statusLabel: NSTextField!
     var dataFromAPI = [String]()
@@ -43,7 +44,6 @@ class GitStatusViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         api()
-        checkConnectionToInternet()
     }
 
     // MARK: - Convert date methods
@@ -81,23 +81,6 @@ class GitStatusViewController: NSViewController {
             self.dataFromAPI = data
             self.setupDiplayLabel()
         })
-    }
-    
-    // MARK: - Check for internet connection using Reachability
-    
-    func checkConnectionToInternet() {
-//        guard let status = Network.reachability?.status else { return }
-//        switch status {
-//        case .unreachable:
-//            print("Unreachable")
-//        case .wifi:
-//            print("WIFI is connected")
-//        case .wwan:
-//            print("this is working?")
-//        }
-        let reachable = Network.reachability?.isConnectedToNetwork
-        print(reachable ?? "no bueno")
-        
     }
     
     // MARK: - Action Button(s)
