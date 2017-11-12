@@ -12,7 +12,7 @@ import Alamofire
     // MARK: - Extension(s)
 extension GitStatusViewController {
 
-    // MARK: Storyboard instantiation
+    // MARK: - Storyboard instantiation for popover menu bar app
     static func freshController() -> GitStatusViewController {
         //1.
         let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
@@ -25,7 +25,7 @@ extension GitStatusViewController {
         return viewcontroller
     }
 }
-
+    // MARK: - Extension for captializing first character in a string
 extension String {
     func capitalizingFirstLetter() -> String {
         return prefix(1).uppercased() + dropFirst()
