@@ -20,7 +20,7 @@ extension GitStatusViewController {
         let identifier = NSStoryboard.SceneIdentifier(rawValue: "GitStatusViewController")
         //3.
         guard let viewcontroller = storyboard.instantiateController(withIdentifier: identifier) as? GitStatusViewController else {
-            fatalError("Why cant i find GitStatusViewController? - Check Main.storyboard")
+            fatalError("Why cant I find GitStatusViewController? - Check Main.storyboard")
         }
         return viewcontroller
     }
