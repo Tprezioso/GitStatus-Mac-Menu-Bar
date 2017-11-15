@@ -9,14 +9,17 @@
 import Cocoa
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDelegate {
 
     let statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
     let popover = NSPopover()
     var eventMonitor: EventMonitor?
+    let notification = NSUserNotification()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // This used to setip menu bar popover
+        NSUserNotificationCenter.default.delegate = self
+        NotificationHelper.sampleNotification(notification: notification)
         if let button = statusItem.button {
             button.image = NSImage(named:NSImage.Name("StatusBarButtonImage"))
             button.action = #selector(togglePopover(_:))
@@ -29,6 +32,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 strongSelf.closePopover(sender: event)
             }
         }
+    }
+    
+    func userNotificationCenter(center: NSUserNotificationCenter, didActivateNotification notification: NSUserNotification) {
+        print("checking notification response")
     }
     
     // Mark: - Used for toggling a popover view for menu bar app
