@@ -17,7 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     let notification = NSUserNotification()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // This used to setip menu bar popover
+        // This used to setup menu bar popover
         NSUserNotificationCenter.default.delegate = self
         NotificationHelper.sampleNotification(notification: notification)
         if let button = statusItem.button {
