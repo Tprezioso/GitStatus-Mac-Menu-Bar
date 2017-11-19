@@ -17,9 +17,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     let notification = NSUserNotification()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // This used to setup menu bar popover
+        // Init Notification Center Delegate
         NSUserNotificationCenter.default.delegate = self
-        NotificationHelper.sampleNotification(notification: notification)
+
+        // This used to setup menu bar popover
         if let button = statusItem.button {
             button.image = NSImage(named:NSImage.Name("StatusBarButtonImage"))
             button.action = #selector(togglePopover(_:))
@@ -34,10 +35,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         }
     }
 
+    // MARK - Notification Center
     // Used for notifications. Keep commented for now until we figure how to do background update
 //    func userNotificationCenter(center: NSUserNotificationCenter, didActivateNotification notification: NSUserNotification) {
 //        print("checking notification response")
 //    }
+    
+    func fireOffNotification() {
+        NotificationHelper.sampleNotification(notification: notification)
+    }
     
     // Mark: - Used for toggling a popover view for menu bar app
     
