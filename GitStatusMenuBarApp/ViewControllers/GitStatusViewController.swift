@@ -78,7 +78,7 @@ class GitStatusViewController: NSViewController {
     // MARK: - API call
     
     func api() {
-        APICall.getContracts(completion: { data in
+        APICall.getStatus(completion: { data in
             self.dataFromAPI = data
             self.setupDiplayLabel()
         })

@@ -11,7 +11,7 @@ import Alamofire
 
 class APICall: NSObject {
     
-    class func getContracts(completion: @escaping ([String]) -> Void) {
+    class func getStatus(completion: @escaping ([String]) -> Void) {
         Alamofire.request("https://status.github.com/api/status.json").responseJSON(completionHandler: {response -> Void in
             switch response.result {
             case .success( _):
