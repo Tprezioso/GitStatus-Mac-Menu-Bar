@@ -33,10 +33,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             }
         }
     }
-    
-    func userNotificationCenter(center: NSUserNotificationCenter, didActivateNotification notification: NSUserNotification) {
-        print("checking notification response")
-    }
+
+    // Used for notifications. Keep commented for now until we figure how to do background update
+//    func userNotificationCenter(center: NSUserNotificationCenter, didActivateNotification notification: NSUserNotification) {
+//        print("checking notification response")
+//    }
     
     // Mark: - Used for toggling a popover view for menu bar app
     
