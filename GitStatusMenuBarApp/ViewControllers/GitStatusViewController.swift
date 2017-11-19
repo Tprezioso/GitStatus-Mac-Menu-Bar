@@ -41,12 +41,12 @@ extension String {
 class GitStatusViewController: NSViewController {
     @IBOutlet var statusLabel: NSTextField!
     var dataFromAPI = [String]()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         api()
     }
-
+   
     // MARK: - Convert date methods
     
     func takeStringFromBeginning(stringToCut:String ,start: Int, end: Int) -> String {

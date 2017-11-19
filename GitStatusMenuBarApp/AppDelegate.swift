@@ -15,11 +15,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     let popover = NSPopover()
     var eventMonitor: EventMonitor?
     let notification = NSUserNotification()
-
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Init Notification Center Delegate
         NSUserNotificationCenter.default.delegate = self
-
         // This used to setup menu bar popover
         if let button = statusItem.button {
             button.image = NSImage(named:NSImage.Name("StatusBarButtonImage"))
