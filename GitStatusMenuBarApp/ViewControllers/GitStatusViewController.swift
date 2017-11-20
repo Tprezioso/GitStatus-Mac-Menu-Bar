@@ -69,9 +69,9 @@ class GitStatusViewController: NSViewController {
         if self.dataFromAPI[0] == "No Internet" {
             self.statusLabel.stringValue = self.dataFromAPI[0]
         } else {
-        let date = self.dataFromAPI[1]
-        let status = self.dataFromAPI[0]
-        self.statusLabel.stringValue = "\(getDateFromJSONDate(dateString: date))\n Status: \(status.capitalizingFirstLetter())"
+            let date = self.dataFromAPI[1]
+            let status = self.dataFromAPI[0]
+            self.statusLabel.stringValue = "\(getDateFromJSONDate(dateString: date))\n Status: \(status.capitalizingFirstLetter())"
         }
     }
 

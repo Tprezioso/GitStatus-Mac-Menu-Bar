@@ -10,14 +10,19 @@ import Foundation
 
 class NotificationHelper {
     static func sampleNotification(notification: NSUserNotification) {
+        
+        APICall.getStatus(completion: { data in
+            print(data)
+        })
+
         let notificationCenter = NSUserNotificationCenter.default
         
         notification.identifier = "unique-id-123"
         notification.hasActionButton = true
         notification.otherButtonTitle = "Close"
         notification.actionButtonTitle = "Show"
-        notification.title = "Hello"
-        notification.subtitle = "How are you?"
+        notification.title = "Git Status"
+        notification.subtitle = ""
         notification.informativeText = "This is a test"
         notificationCenter.deliver(notification)
     }
