@@ -16,10 +16,10 @@ class NotificationHelper {
         notification.identifier = "unique-id-123"
         notification.hasActionButton = true
         notification.otherButtonTitle = "Close"
-        notification.actionButtonTitle = "Show"
+        notification.actionButtonTitle = "Details"
         notification.title = "Git Status"
-        notification.subtitle = ""
-        notification.informativeText = "This is a test"
+        notification.subtitle = "Status"
+//        notification.informativeText = "This is a test"
         notificationCenter.deliver(notification)
     }
 }

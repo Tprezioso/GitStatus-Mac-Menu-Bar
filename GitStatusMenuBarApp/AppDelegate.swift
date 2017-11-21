@@ -49,6 +49,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     @objc func togglePopover(_ sender: Any?) {
         if popover.isShown {
             closePopover(sender: sender)
+            fireOffNotification()
         } else {
             showPopover(sender: sender)
         }
