@@ -11,10 +11,6 @@ import Foundation
 class NotificationHelper {
     static func sampleNotification(notification: NSUserNotification) {
         
-        APICall.getStatus(completion: { data in
-            print(data)
-        })
-
         let notificationCenter = NSUserNotificationCenter.default
         
         notification.identifier = "unique-id-123"
