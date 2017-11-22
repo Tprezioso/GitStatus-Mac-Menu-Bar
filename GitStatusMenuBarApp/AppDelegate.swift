@@ -19,6 +19,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Init Notification Center Delegate
         NSUserNotificationCenter.default.delegate = self
+        
+        startTimer()
+        
         // This used to setup menu bar popover
         if let button = statusItem.button {
             button.image = NSImage(named:NSImage.Name("StatusBarButtonImage"))
@@ -42,6 +45,27 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     
     func fireOffNotification() {
         NotificationHelper.sampleNotification(notification: notification)
+    }
+    
+    var countdownTimer: Timer!
+    var totalTime = 60
+    
+    func startTimer() {
+        countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTime() {
+        
+        if totalTime != 0 {
+            totalTime -= 1
+            print(totalTime)
+        } else {
+            endTimer()
+        }
+    }
+    
+    func endTimer() {
+        countdownTimer.invalidate()
     }
     
     // Mark: - Used for toggling a popover view for menu bar app
