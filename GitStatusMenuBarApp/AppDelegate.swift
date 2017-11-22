@@ -48,7 +48,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     }
     
     var countdownTimer: Timer!
-    var totalTime = 60
+    var totalTime = 10
     
     func startTimer() {
         countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
@@ -60,7 +60,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             totalTime -= 1
             print(totalTime)
         } else {
-            endTimer()
+            //endTimer()
+            // added to restart check for update
+            totalTime = 10
+            
         }
     }
     
