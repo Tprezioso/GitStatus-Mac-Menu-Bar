@@ -60,10 +60,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             totalTime -= 1
             print(totalTime)
         } else {
-            //endTimer()
+            // endTimer()
             // added to restart check for update
             totalTime = 10
-            
         }
     }
     
