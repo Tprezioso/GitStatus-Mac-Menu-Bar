@@ -63,6 +63,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         } else {
             // endTimer()
             // added to restart check for update
+            var dataFromAPICall = [String]()
+            APICall.getStatus(completion: { data in
+                dataFromAPICall = data
+            })
             totalTime = 10
         }
     }
