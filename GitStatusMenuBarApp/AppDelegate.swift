@@ -20,6 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         // Init Notification Center Delegate
         NSUserNotificationCenter.default.delegate = self
         
+        // startTimer function right now is for checking for notifications
         startTimer()
         
         // This used to setup menu bar popover
