@@ -44,8 +44,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
 //        print("checking notification response")
 //    }
     
-    func fireOffNotification() {
-        NotificationHelper.sampleNotification(notification: notification)
+    func fireOffNotification(statusFromAPI: String) {
+        NotificationHelper.sampleNotification(notification: notification, status: statusFromAPI)
     }
     
     var countdownTimer: Timer!
@@ -63,9 +63,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         } else {
             // endTimer()
             // added to restart check for update
+            // This is still not working because it will never be called
             var dataFromAPICall = [String]()
             APICall.getStatus(completion: { data in
                 dataFromAPICall = data
+                self.fireOffNotification(statusFromAPI: data[0])
             })
             totalTime = 10
         }

@@ -9,7 +9,7 @@
 import Foundation
 
 class NotificationHelper {
-    static func sampleNotification(notification: NSUserNotification) {
+    static func sampleNotification(notification: NSUserNotification, status:String) {
         
         let notificationCenter = NSUserNotificationCenter.default
         
@@ -18,7 +18,7 @@ class NotificationHelper {
         notification.otherButtonTitle = "Close"
         notification.actionButtonTitle = "Details"
         notification.title = "Git Status"
-        notification.subtitle = "Status"
+        notification.subtitle = "\(status)"
 //        notification.informativeText = "This is a test"
         notificationCenter.deliver(notification)
     }
