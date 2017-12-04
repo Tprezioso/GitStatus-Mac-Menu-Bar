@@ -45,6 +45,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
 //    }
     
     func fireOffNotification() {
+        NotificationHelper.sampleNotification(notification: notification)
     }
     
     var countdownTimer: Timer!
@@ -54,6 +55,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
     
+
     @objc func updateTime() {
         
         if totalTime != 0 {
@@ -67,6 +69,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             APICall.getStatus(completion: { data in
                 dataFromAPICall = data
                 print(dataFromAPICall)
+//                NotificationHelper.sampleNotification(notification: self.notification, status: dataFromAPICall[0])
             })
             totalTime = 10
         }
