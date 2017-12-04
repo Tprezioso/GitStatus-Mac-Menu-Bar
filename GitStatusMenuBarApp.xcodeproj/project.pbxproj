@@ -288,6 +288,11 @@
 					9F27CDC41F85735B0077A2B1 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					9F27CDD91F85735B0077A2B1 = {
 						CreatedOnToolsVersion = 9.0;

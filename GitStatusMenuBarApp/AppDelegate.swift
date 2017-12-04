@@ -69,7 +69,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             APICall.getStatus(completion: { data in
                 dataFromAPICall = data
                 print(dataFromAPICall)
-//                NotificationHelper.sampleNotification(notification: self.notification, status: dataFromAPICall[0])
+//                NotificationHelper.sampleNotification(notification: notification)
             })
             totalTime = 10
         }

@@ -18,8 +18,14 @@ class NotificationHelper {
         notification.otherButtonTitle = "Close"
         notification.actionButtonTitle = "Details"
         notification.title = "Git Status"
-//        notification.subtitle = "\(status)"
+        notification.subtitle = "hello"
 //        notification.informativeText = "This is a test"
         notificationCenter.deliver(notification)
     }
+
+    func userNotificationCenter(_ center: NSUserNotificationCenter,
+                                shouldPresent notification: NSUserNotification) -> Bool {
+        return true
+    }
 }
+
