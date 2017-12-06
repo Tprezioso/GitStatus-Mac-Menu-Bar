@@ -19,7 +19,7 @@ class NotificationHelper {
         notification.actionButtonTitle = "Details"
         notification.title = "Git Status"
         notification.subtitle = "hello"
-//        notification.informativeText = "This is a test"
+        notification.informativeText = "This is a test"
         notificationCenter.deliver(notification)
     }
 
