@@ -43,6 +43,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
 //    func userNotificationCenter(center: NSUserNotificationCenter, didActivateNotification notification: NSUserNotification) {
 //        print("checking notification response")
 //    }
+    func userNotificationCenter(_ center: NSUserNotificationCenter, shouldPresent notification: NSUserNotification) -> Bool {
+        return true
+    }
     
     func fireOffNotification() {
         NotificationHelper.sampleNotification(notification: notification)
