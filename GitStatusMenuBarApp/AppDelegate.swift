@@ -19,7 +19,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Init Notification Center Delegate
         NSUserNotificationCenter.default.delegate = self
-        
+        NotificationHelper.sampleNotification(notification: self.notification)
+
         // startTimer function right now is for checking for notifications
         startTimer()
         
@@ -43,7 +44,17 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
 //    func userNotificationCenter(center: NSUserNotificationCenter, didActivateNotification notification: NSUserNotification) {
 //        print("checking notification response")
 //    }
-    func userNotificationCenter(_ center: NSUserNotificationCenter, shouldPresent notification: NSUserNotification) -> Bool {
+    func showNotification() -> Void {
+        let notification = NSUserNotification()
+        notification.title = "Test."
+        notification.subtitle = "Sub Test."
+        notification.soundName = NSUserNotificationDefaultSoundName
+        NSUserNotificationCenter.default.delegate = self
+        NSUserNotificationCenter.default.deliver(notification)
+    }
+    
+    func userNotificationCenter(_ center: NSUserNotificationCenter,
+                                shouldPresent notification: NSUserNotification) -> Bool {
         return true
     }
     
@@ -72,7 +83,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             APICall.getStatus(completion: { data in
                 dataFromAPICall = data
                 print(dataFromAPICall)
-//                NotificationHelper.sampleNotification(notification: notification)
             })
             totalTime = 10
         }
@@ -87,7 +97,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     @objc func togglePopover(_ sender: Any?) {
         if popover.isShown {
             closePopover(sender: sender)
-            fireOffNotification()
+            //fireOffNotification()
+            showNotification()
         } else {
             showPopover(sender: sender)
         }
