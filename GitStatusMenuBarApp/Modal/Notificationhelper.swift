@@ -27,5 +27,13 @@ class NotificationHelper {
                                 shouldPresent notification: NSUserNotification) -> Bool {
         return true
     }
+        func showNotification() -> Void {
+            let notification = NSUserNotification()
+            notification.title = "Test."
+            notification.subtitle = "Sub Test."
+            notification.soundName = NSUserNotificationDefaultSoundName
+//            NSUserNotificationCenter.default.delegate = self
+            NSUserNotificationCenter.default.deliver(notification)
+        }
 }
 

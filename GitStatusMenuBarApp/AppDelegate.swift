@@ -44,6 +44,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
 //    func userNotificationCenter(center: NSUserNotificationCenter, didActivateNotification notification: NSUserNotification) {
 //        print("checking notification response")
 //    }
+
     func showNotification() -> Void {
         let notification = NSUserNotification()
         notification.title = "Test."
@@ -83,6 +84,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             APICall.getStatus(completion: { data in
                 dataFromAPICall = data
                 print(dataFromAPICall)
+                self.showNotification()
             })
             totalTime = 10
         }
@@ -98,7 +100,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         if popover.isShown {
             closePopover(sender: sender)
             //fireOffNotification()
-            showNotification()
+            
         } else {
             showPopover(sender: sender)
         }
