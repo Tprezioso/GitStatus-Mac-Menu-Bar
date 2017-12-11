@@ -45,10 +45,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
 //        print("checking notification response")
 //    }
 
-    func showNotification() -> Void {
+    func showNotification(apiStatus:String) -> Void {
         let notification = NSUserNotification()
-        notification.title = "Test."
-        notification.subtitle = "Sub Test."
+        notification.title = "Github Status"
+        notification.subtitle = "Status: \(apiStatus)"
         notification.soundName = NSUserNotificationDefaultSoundName
         NSUserNotificationCenter.default.delegate = self
         NSUserNotificationCenter.default.deliver(notification)
@@ -84,7 +84,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             APICall.getStatus(completion: { data in
                 dataFromAPICall = data
                 print(dataFromAPICall)
-                self.showNotification()
+                self.showNotification(apiStatus: dataFromAPICall[0])
             })
             totalTime = 10
         }
@@ -99,8 +99,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     @objc func togglePopover(_ sender: Any?) {
         if popover.isShown {
             closePopover(sender: sender)
-            //fireOffNotification()
-            
         } else {
             showPopover(sender: sender)
         }
