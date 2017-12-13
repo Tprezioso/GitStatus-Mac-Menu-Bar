@@ -84,7 +84,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             APICall.getStatus(completion: { data in
                 dataFromAPICall = data
                 print(dataFromAPICall)
-                self.showNotification(apiStatus: dataFromAPICall[0])
+                if dataFromAPICall[0] != "good" {
+                    self.showNotification(apiStatus: dataFromAPICall[0])
+                }
             })
             totalTime = 10
         }
