@@ -87,10 +87,9 @@ class GitStatusViewController: NSViewController {
     // MARK: - Action Button(s)
     
     @IBAction func detailedStatusButton(_ sender: Any) {
-//        if let url = URL(string: "https://status.github.com/messages"), NSWorkspace.shared.open(url){
-//            print("opened in default browser")
-//        }
-        NSWorkspace.shared.open(NSURL(string: "https://google.com")! as URL)
+        if let url = URL(string: "https://status.github.com/messages"), NSWorkspace.shared.open(url){
+            print("opened in default browser")
+        }
         // Used to close app once the button is pressed and you a brought to website
         let appdelegate = NSApplication.shared.delegate as! AppDelegate
         appdelegate.closePopover(sender: sender)
