@@ -45,15 +45,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
 //        print("checking notification response")
 //    }
 
-    func showNotification(apiStatus:String) -> Void {
-        let notification = NSUserNotification()
-        notification.title = "Github Status"
-        notification.subtitle = "Status: \(apiStatus)"
-        notification.soundName = NSUserNotificationDefaultSoundName
-        NSUserNotificationCenter.default.delegate = self
-        NSUserNotificationCenter.default.deliver(notification)
-    }
-    
     func userNotificationCenter(_ center: NSUserNotificationCenter,
                                 shouldPresent notification: NSUserNotification) -> Bool {
         return true
@@ -80,12 +71,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             // endTimer()
             // added to restart check for update
             // This is still not working because it will never be called
+            let notificationForAPI = NotificationHelper.self
+            
             var dataFromAPICall = [String]()
             APICall.getStatus(completion: { data in
                 dataFromAPICall = data
                 print(dataFromAPICall)
                 if dataFromAPICall[0] != "good" {
-                    self.showNotification(apiStatus: dataFromAPICall[0])
+                    notificationForAPI.showNotification(message: dataFromAPICall[0])
                 }
             })
             totalTime = 10
