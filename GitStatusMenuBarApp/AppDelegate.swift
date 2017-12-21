@@ -15,6 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     let popover = NSPopover()
     var eventMonitor: EventMonitor?
     let notification = NSUserNotification()
+    let userDefaults = UserDefaults.standard
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Init Notification Center Delegate
@@ -37,6 +38,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
                 strongSelf.closePopover(sender: event)
             }
         }
+
+        // MARK: - First time in app check of status API call
+        APICall.getStatus(completion: { data in
+            self.userDefaults.setValue(data, forKey: "FTIAjson")
+        })
     }
 
     // MARK - Notification Center
