@@ -41,7 +41,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
 
         // MARK: - First time in app check of status API call
         APICall.getStatus(completion: { data in
-            self.userDefaults.setValue(data, forKey: "FTIAjson")
+            self.userDefaults.setValue(data[0], forKey: "FTIAjson")
+            self.userDefaults.synchronize()
         })
     }
 
@@ -66,7 +67,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     func startTimer() {
         countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
-    
 
     @objc func updateTime() {
         
@@ -76,14 +76,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         } else {
             // endTimer()
             // added to restart check for update
-            // This is still not working because it will never be called
             let notificationForAPI = NotificationHelper.self
-            
+
+            let savedStatusCheck = self.userDefaults.string(forKey: "FTIAjson")
+            print(savedStatusCheck as Any)
             var dataFromAPICall = [String]()
             APICall.getStatus(completion: { data in
                 dataFromAPICall = data
                 print(dataFromAPICall)
-                if dataFromAPICall[0] != "good" {
+                if dataFromAPICall[0] != savedStatusCheck {
                     notificationForAPI.showNotification(message: dataFromAPICall[0])
                 }
             })
