@@ -18,8 +18,22 @@ class NotificationHelper {
         notification.otherButtonTitle = "Close"
         notification.actionButtonTitle = "Details"
         notification.title = "Git Status"
-        notification.subtitle = "Status"
-//        notification.informativeText = "This is a test"
+        notification.subtitle = "hello"
+        notification.informativeText = "This is a test"
         notificationCenter.deliver(notification)
     }
+
+    func userNotificationCenter(_ center: NSUserNotificationCenter,
+                                shouldPresent notification: NSUserNotification) -> Bool {
+        return true
+    }
+    static func showNotification(message: String) {
+            let notification = NSUserNotification()
+            notification.title = "GitHub Status"
+            notification.subtitle = "\(message)"
+            notification.soundName = NSUserNotificationDefaultSoundName
+//            NSUserNotificationCenter.default.delegate = self
+            NSUserNotificationCenter.default.deliver(notification)
+        }
 }
+

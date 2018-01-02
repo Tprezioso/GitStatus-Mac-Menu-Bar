@@ -15,11 +15,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     let popover = NSPopover()
     var eventMonitor: EventMonitor?
     let notification = NSUserNotification()
+    let userDefaults = UserDefaults.standard
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Init Notification Center Delegate
         NSUserNotificationCenter.default.delegate = self
-        
+        NotificationHelper.sampleNotification(notification: self.notification)
+
+        // startTimer function right now is for checking for notifications
         startTimer()
         
         // This used to setup menu bar popover
@@ -35,6 +38,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
                 strongSelf.closePopover(sender: event)
             }
         }
+
+        // MARK: - First time in app check of status API call
+        APICall.getStatus(completion: { data in
+            self.userDefaults.setValue(data[0], forKey: "FTIAjson")
+            self.userDefaults.synchronize()
+        })
     }
 
     // MARK - Notification Center
@@ -42,6 +51,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
 //    func userNotificationCenter(center: NSUserNotificationCenter, didActivateNotification notification: NSUserNotification) {
 //        print("checking notification response")
 //    }
+
+    func userNotificationCenter(_ center: NSUserNotificationCenter,
+                                shouldPresent notification: NSUserNotification) -> Bool {
+        return true
+    }
     
     func fireOffNotification() {
         NotificationHelper.sampleNotification(notification: notification)
@@ -53,7 +67,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     func startTimer() {
         countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
-    
+
     @objc func updateTime() {
         
         if totalTime != 0 {
@@ -62,6 +76,20 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         } else {
             // endTimer()
             // added to restart check for update
+            let notificationForAPI = NotificationHelper.self
+
+            let savedStatusCheck = self.userDefaults.string(forKey: "FTIAjson")
+            print(savedStatusCheck as Any)
+            var dataFromAPICall = [String]()
+            APICall.getStatus(completion: { data in
+                dataFromAPICall = data
+                // For testing of notifications
+//                print(dataFromAPICall)
+                print(savedStatusCheck ?? "Not saving")
+                if dataFromAPICall[0] != savedStatusCheck {
+                    notificationForAPI.showNotification(message: dataFromAPICall[0])
+                }
+            })
             totalTime = 10
         }
     }
@@ -75,7 +103,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     @objc func togglePopover(_ sender: Any?) {
         if popover.isShown {
             closePopover(sender: sender)
-            fireOffNotification()
         } else {
             showPopover(sender: sender)
         }
