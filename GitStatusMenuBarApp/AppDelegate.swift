@@ -84,7 +84,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             APICall.getStatus(completion: { data in
                 dataFromAPICall = data
                 // For testing of notifications
-//                print(dataFromAPICall)
+                // print(dataFromAPICall)
                 print(savedStatusCheck ?? "Not saving")
                 if dataFromAPICall[0] != savedStatusCheck {
                     notificationForAPI.showNotification(message: dataFromAPICall[0])
