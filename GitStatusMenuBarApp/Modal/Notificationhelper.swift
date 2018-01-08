@@ -27,13 +27,17 @@ class NotificationHelper {
                                 shouldPresent notification: NSUserNotification) -> Bool {
         return true
     }
+    
     static func showNotification(message: String) {
-            let notification = NSUserNotification()
-            notification.title = "GitHub Status"
-            notification.subtitle = "\(message)"
-            notification.soundName = NSUserNotificationDefaultSoundName
+        let notification = NSUserNotification()
+        notification.hasActionButton = true
+        notification.title = "GitHub Status"
+        notification.otherButtonTitle = "Close"
+        notification.actionButtonTitle = "Details"
+        notification.subtitle = "\(message)"
+        notification.soundName = NSUserNotificationDefaultSoundName
 //            NSUserNotificationCenter.default.delegate = self
-            NSUserNotificationCenter.default.deliver(notification)
-        }
+        NSUserNotificationCenter.default.deliver(notification)
+    }
 }
 
