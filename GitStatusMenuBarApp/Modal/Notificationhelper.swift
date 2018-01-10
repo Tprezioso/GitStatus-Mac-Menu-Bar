@@ -19,7 +19,7 @@ class NotificationHelper {
         notification.hasActionButton = true
         notification.otherButtonTitle = "Close"
         // TODO: - Commented out for now until we can figure out how to added action to details
-        //        notification.actionButtonTitle = "Details"
+        notification.actionButtonTitle = "Details"
         notification.title = "GitHub Status"
         notification.subtitle = "\(message)"
         notification.soundName = NSUserNotificationDefaultSoundName

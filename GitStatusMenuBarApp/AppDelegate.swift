@@ -47,9 +47,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
 
     // MARK - Notification Center
     // Used for notifications. Keep commented for now until we figure how to do background update
-//    func userNotificationCenter(center: NSUserNotificationCenter, didActivateNotification notification: NSUserNotification) {
-//        print("checking notification response")
-//    }
+    func userNotificationCenter(_ center: NSUserNotificationCenter, didActivate notification: NSUserNotification) {
+        if let url = URL(string: "https://status.github.com/messages"), NSWorkspace.shared.open(url){
+            print("opened in default browser")
+        }
+        print("checking notification response")
+    }
 
     func userNotificationCenter(_ center: NSUserNotificationCenter,
                                 shouldPresent notification: NSUserNotification) -> Bool {
