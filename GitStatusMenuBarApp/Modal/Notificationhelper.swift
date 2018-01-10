@@ -9,20 +9,6 @@
 import Foundation
 
 class NotificationHelper {
-    static func sampleNotification(notification: NSUserNotification) {
-        
-        let notificationCenter = NSUserNotificationCenter.default
-        
-        notification.identifier = "unique-id-123"
-        notification.hasActionButton = true
-        notification.otherButtonTitle = "Close"
-        notification.actionButtonTitle = "Details"
-        notification.title = "Git Status"
-        notification.subtitle = "hello"
-        notification.informativeText = "This is a test"
-        notificationCenter.deliver(notification)
-    }
-
     func userNotificationCenter(_ center: NSUserNotificationCenter,
                                 shouldPresent notification: NSUserNotification) -> Bool {
         return true
@@ -31,13 +17,25 @@ class NotificationHelper {
     static func showNotification(message: String) {
         let notification = NSUserNotification()
         notification.hasActionButton = true
-        notification.title = "GitHub Status"
         notification.otherButtonTitle = "Close"
         notification.actionButtonTitle = "Details"
+        notification.title = "GitHub Status"
         notification.subtitle = "\(message)"
         notification.soundName = NSUserNotificationDefaultSoundName
-//            NSUserNotificationCenter.default.delegate = self
         NSUserNotificationCenter.default.deliver(notification)
     }
+    //    static func sampleNotification(notification: NSUserNotification) {
+    //
+    //        let notificationCenter = NSUserNotificationCenter.default
+    //
+    //        notification.identifier = "unique-id-123"
+    //        notification.hasActionButton = true
+    //        notification.otherButtonTitle = "Close"
+    //        notification.actionButtonTitle = "Details"
+    //        notification.title = "Git Status"
+    //        notification.subtitle = "hello"
+    //        notification.informativeText = "This is a test"
+    //        notificationCenter.deliver(notification)
+    //    }
 }
 
