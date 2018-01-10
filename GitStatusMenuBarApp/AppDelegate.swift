@@ -20,7 +20,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Init Notification Center Delegate
         NSUserNotificationCenter.default.delegate = self
-//        NotificationHelper.sampleNotification(notification: self.notification)
 
         // startTimer function right now is for checking for notifications
         startTimer()
@@ -86,9 +85,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
                 // For testing of notifications
                 // print(dataFromAPICall)
                 print(savedStatusCheck ?? "Not saving")
+                // savedStatusCheck needs to be replace with test string below
                 if dataFromAPICall[0] != "s" {
                     notificationForAPI.showNotification(message: dataFromAPICall[0])
-//                    notificationForAPI.sampleNotification(notification: self.notification)
                 }
             })
             totalTime = 10
