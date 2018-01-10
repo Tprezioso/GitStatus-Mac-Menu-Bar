@@ -59,10 +59,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         return true
     }
     
-    func fireOffNotification() {
-//        NotificationHelper.sampleNotification(notification: notification)
-    }
-    
     var countdownTimer: Timer!
     var totalTime = 10
     
@@ -88,8 +84,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
                 // For testing of notifications
                 // print(dataFromAPICall)
                 print(savedStatusCheck ?? "Not saving")
-                // savedStatusCheck needs to be replace with test string below
-                if dataFromAPICall[0] != "s" {
+                if dataFromAPICall[0] != "savedStatusCheck" {
                     notificationForAPI.showNotification(message: dataFromAPICall[0])
                 }
             })
