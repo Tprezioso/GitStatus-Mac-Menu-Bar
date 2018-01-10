@@ -20,7 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Init Notification Center Delegate
         NSUserNotificationCenter.default.delegate = self
-        NotificationHelper.sampleNotification(notification: self.notification)
+//        NotificationHelper.sampleNotification(notification: self.notification)
 
         // startTimer function right now is for checking for notifications
         startTimer()
@@ -58,7 +58,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     }
     
     func fireOffNotification() {
-        NotificationHelper.sampleNotification(notification: notification)
+//        NotificationHelper.sampleNotification(notification: notification)
     }
     
     var countdownTimer: Timer!

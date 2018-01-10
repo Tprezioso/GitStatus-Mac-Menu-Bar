@@ -24,18 +24,5 @@ class NotificationHelper {
         notification.soundName = NSUserNotificationDefaultSoundName
         NSUserNotificationCenter.default.deliver(notification)
     }
-    //    static func sampleNotification(notification: NSUserNotification) {
-    //
-    //        let notificationCenter = NSUserNotificationCenter.default
-    //
-    //        notification.identifier = "unique-id-123"
-    //        notification.hasActionButton = true
-    //        notification.otherButtonTitle = "Close"
-    //        notification.actionButtonTitle = "Details"
-    //        notification.title = "Git Status"
-    //        notification.subtitle = "hello"
-    //        notification.informativeText = "This is a test"
-    //        notificationCenter.deliver(notification)
-    //    }
 }
 
