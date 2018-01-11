@@ -74,20 +74,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         } else {
             // endTimer()
             // added to restart check for update
-            let notificationForAPI = NotificationHelper.self
-
-            let savedStatusCheck = self.userDefaults.string(forKey: "FTIAjson")
-            print(savedStatusCheck as Any)
-            var dataFromAPICall = [String]()
-            APICall.getStatus(completion: { data in
-                dataFromAPICall = data
-                // For testing of notifications
-                // print(dataFromAPICall)
-                print(savedStatusCheck ?? "Not saving")
-                if dataFromAPICall[0] != "savedStatusCheck" {
-                    notificationForAPI.showNotification(message: dataFromAPICall[0])
-                }
-            })
+            checkAPIForChange()
             totalTime = 10
         }
     }
@@ -96,6 +83,23 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         countdownTimer.invalidate()
     }
     
+    func checkAPIForChange() {
+        let notificationForAPI = NotificationHelper.self
+        
+        let savedStatusCheck = self.userDefaults.string(forKey: "FTIAjson")
+        print(savedStatusCheck as Any)
+        var dataFromAPICall = [String]()
+        APICall.getStatus(completion: { data in
+            dataFromAPICall = data
+            // For testing of notifications
+            // print(dataFromAPICall)
+            print(savedStatusCheck ?? "Not saving")
+            if dataFromAPICall[0] != "savedStatusCheck" {
+                notificationForAPI.showNotification(message: dataFromAPICall[0])
+            }
+        })
+
+    }
     // Mark: - Used for toggling a popover view for menu bar app
     
     @objc func togglePopover(_ sender: Any?) {
