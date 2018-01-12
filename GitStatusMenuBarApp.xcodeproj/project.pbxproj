@@ -16,6 +16,7 @@
 		9F27CDDF1F85735B0077A2B1 /* GitStatusMenuBarAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27CDDE1F85735B0077A2B1 /* GitStatusMenuBarAppTests.swift */; };
 		9F27CDEA1F85735B0077A2B1 /* GitStatusMenuBarAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27CDE91F85735B0077A2B1 /* GitStatusMenuBarAppUITests.swift */; };
 		9F27CDF91F8B0F590077A2B1 /* GitStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27CDF81F8B0F590077A2B1 /* GitStatusViewController.swift */; };
+		9F7FE2772009579C0003264F /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7FE2762009579C0003264F /* HelperFunctions.swift */; };
 		9F8A20611FBBA6EB004AA472 /* Notificationhelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8A20601FBBA6EB004AA472 /* Notificationhelper.swift */; };
 		9F93F4B01FA5712000A9C0D1 /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F93F4AF1FA5712000A9C0D1 /* APICall.swift */; };
 		9FE3DB2B1F9D3445000C0B97 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE3DB2A1F9D3445000C0B97 /* EventMonitor.swift */; };
@@ -58,6 +59,7 @@
 		9F27CDEB1F85735B0077A2B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F27CDF71F8819F40077A2B1 /* StatusBarButtonImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StatusBarButtonImage@2x.png"; sourceTree = "<group>"; };
 		9F27CDF81F8B0F590077A2B1 /* GitStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitStatusViewController.swift; sourceTree = "<group>"; };
+		9F7FE2762009579C0003264F /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		9F8A20601FBBA6EB004AA472 /* Notificationhelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notificationhelper.swift; sourceTree = "<group>"; };
 		9F93F4AF1FA5712000A9C0D1 /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APICall.swift; path = GitStatusMenuBarApp/Modal/APICall.swift; sourceTree = SOURCE_ROOT; };
 		9FE3DB2A1F9D3445000C0B97 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			children = (
 				9F8A20601FBBA6EB004AA472 /* Notificationhelper.swift */,
 				9F93F4AF1FA5712000A9C0D1 /* APICall.swift */,
+				9F7FE2762009579C0003264F /* HelperFunctions.swift */,
 				9FE3DB2A1F9D3445000C0B97 /* EventMonitor.swift */,
 			);
 			path = Modal;
@@ -495,6 +498,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F7FE2772009579C0003264F /* HelperFunctions.swift in Sources */,
 				9F8A20611FBBA6EB004AA472 /* Notificationhelper.swift in Sources */,
 				9F27CDCE1F85735B0077A2B1 /* GitStatusMenuBarApp.xcdatamodeld in Sources */,
 				9FE3DB2B1F9D3445000C0B97 /* EventMonitor.swift in Sources */,

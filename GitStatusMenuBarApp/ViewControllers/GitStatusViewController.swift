@@ -25,16 +25,6 @@ extension GitStatusViewController {
         return viewcontroller
     }
 }
-    // MARK: - Extension for captializing first character in a string
-extension String {
-    func capitalizingFirstLetter() -> String {
-        return prefix(1).uppercased() + dropFirst()
-    }
-    
-    mutating func capitalizeFirstLetter() {
-        self = self.capitalizingFirstLetter()
-    }
-}
 
     // MARK: - ViewController
 

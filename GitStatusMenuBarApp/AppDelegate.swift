@@ -95,10 +95,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             // print(dataFromAPICall)
             print(savedStatusCheck ?? "Not saving")
             if dataFromAPICall[0] != savedStatusCheck {
-                notificationForAPI.showNotification(message: dataFromAPICall[0])
+                notificationForAPI.showNotification(message: dataFromAPICall[0].capitalizingFirstLetter())
             }
         })
-
     }
     // Mark: - Used for toggling a popover view for menu bar app
     
