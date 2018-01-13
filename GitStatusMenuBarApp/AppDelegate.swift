@@ -86,6 +86,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     func checkAPIForChange() {
         let notificationForAPI = NotificationHelper.self
         
+        // add a reset to the userdefaults after first time check
         let savedStatusCheck = self.userDefaults.string(forKey: "FTIAjson")
         print(savedStatusCheck as Any)
         var dataFromAPICall = [String]()
