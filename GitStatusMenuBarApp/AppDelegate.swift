@@ -73,7 +73,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             print(totalTime)
         } else {
             // endTimer()
-            // added to restart check for update
             checkAPIForChange()
             totalTime = 10
         }
@@ -86,14 +85,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     func checkAPIForChange() {
         let notificationForAPI = NotificationHelper.self
         
-        // add a reset to the userdefaults after first time check
         let savedStatusCheck = self.userDefaults.string(forKey: "FTIAjson")
         print(savedStatusCheck as Any)
         var dataFromAPICall = [String]()
         APICall.getStatus(completion: { data in
             dataFromAPICall = data
-            // For testing of notifications
-            // print(dataFromAPICall)
             print(savedStatusCheck ?? "Not saving")
             if dataFromAPICall[0] != savedStatusCheck {
                 notificationForAPI.showNotification(message: dataFromAPICall[0].capitalizingFirstLetter())
@@ -102,6 +98,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             }
         })
     }
+
     // Mark: - Used for toggling a popover view for menu bar app
     
     @objc func togglePopover(_ sender: Any?) {
