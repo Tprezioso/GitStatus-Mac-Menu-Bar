@@ -26,7 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         
         // This used to setup menu bar popover
         if let button = statusItem.button {
-            button.image = NSImage(named:NSImage.Name("StatusBarButtonImage"))
+            button.image = NSImage(named:NSImage.Name("StatusDesktopIcon"))
             button.action = #selector(togglePopover(_:))
         }
         popover.contentViewController = GitStatusViewController.freshController()
