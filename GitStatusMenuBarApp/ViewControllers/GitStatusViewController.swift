@@ -51,7 +51,7 @@ class GitStatusViewController: NSViewController {
         let month = takeStringFromBeginning(stringToCut: dateString, start: 5, end: 6)
         let year = takeStringFromBeginning(stringToCut: dateString, start: 0, end: 3)
         
-        return "Last Updated\n\(month)/\(day)/\(year)"
+        return "Last Status Change\n\(month)/\(day)/\(year)"
     }
 
     // MARK : - Setup of Display label
@@ -61,7 +61,7 @@ class GitStatusViewController: NSViewController {
         } else {
             let date = self.dataFromAPI[1]
             let status = self.dataFromAPI[0]
-            self.statusLabel.stringValue = "\(getDateFromJSONDate(dateString: date))\n Status: \(status.capitalizingFirstLetter())"
+            self.statusLabel.stringValue = "\(getDateFromJSONDate(dateString: date))\n Current Status: \(status.capitalizingFirstLetter())"
         }
     }
 
