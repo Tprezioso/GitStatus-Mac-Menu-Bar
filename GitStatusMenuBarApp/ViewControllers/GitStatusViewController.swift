@@ -9,7 +9,7 @@
 import Cocoa
 import Alamofire
 
-    // MARK: - Extension(s)
+    // MARK: - Extension for Menu Bar App
 extension GitStatusViewController {
 
     // MARK: - Storyboard instantiation for popover menu bar app
