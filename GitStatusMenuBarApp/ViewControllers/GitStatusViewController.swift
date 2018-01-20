@@ -13,7 +13,7 @@ import Alamofire
 extension GitStatusViewController {
 
     // MARK: - Storyboard instantiation for popover menu bar app
-    static func freshController() -> GitStatusViewController {
+    static func menuBarViewController() -> GitStatusViewController {
         //1.
         let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
         //2.
@@ -34,7 +34,7 @@ class GitStatusViewController: NSViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        api()
+        apiCall()
     }
    
     // MARK: - Convert date methods
@@ -46,7 +46,7 @@ class GitStatusViewController: NSViewController {
         return String(stringToCut[startIndex...endIndex])
     }
     
-    func getDateFromJSONDate(dateString: String) -> String {
+    func getDateFromJSONData(dateString: String) -> String {
         let day = takeStringFromBeginning(stringToCut: dateString, start: 8, end: 9)
         let month = takeStringFromBeginning(stringToCut: dateString, start: 5, end: 6)
         let year = takeStringFromBeginning(stringToCut: dateString, start: 0, end: 3)
@@ -61,13 +61,13 @@ class GitStatusViewController: NSViewController {
         } else {
             let date = self.dataFromAPI[1]
             let status = self.dataFromAPI[0]
-            self.statusLabel.stringValue = "\(getDateFromJSONDate(dateString: date))\n Current Status: \(status.capitalizingFirstLetter())"
+            self.statusLabel.stringValue = "\(getDateFromJSONData(dateString: date))\n Current Status: \(status.capitalizingFirstLetter())"
         }
     }
 
     // MARK: - API call
     
-    func api() {
+    func apiCall() {
         APICall.getStatus(completion: { data in
             self.dataFromAPI = data
             self.setupDiplayLabel()

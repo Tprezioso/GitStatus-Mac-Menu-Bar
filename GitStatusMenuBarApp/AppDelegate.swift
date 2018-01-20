@@ -30,7 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             button.image?.isTemplate = true
             button.action = #selector(togglePopover(_:))
         }
-        popover.contentViewController = GitStatusViewController.freshController()
+        popover.contentViewController = GitStatusViewController.menuBarViewController()
         
         // Event Monitor is used to close app once you click outside the view
         eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [weak self] event in
@@ -115,7 +115,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
             
             // Line below is used to refresh the viewcontroller when toggled on and off for api call                            
-            popover.contentViewController = GitStatusViewController.freshController()
+            popover.contentViewController = GitStatusViewController.menuBarViewController()
         }
         eventMonitor?.start()
     }
