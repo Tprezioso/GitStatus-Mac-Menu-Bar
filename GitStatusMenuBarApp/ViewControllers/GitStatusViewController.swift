@@ -55,6 +55,7 @@ class GitStatusViewController: NSViewController {
     }
 
     // MARK : - Setup of Display label
+    
     func setupDiplayLabel() {
         if self.dataFromAPI[0] == "No Internet" {
             self.statusLabel.stringValue = self.dataFromAPI[0]
