@@ -92,7 +92,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         APICall.getStatus(completion: { data in
             dataFromAPICall = data
             print(savedStatusCheck ?? "Not saving")
-            if dataFromAPICall[0] != savedStatusCheck {
+            if dataFromAPICall[0] != savedStatusCheck  {
                 notificationForAPI.showNotification(message: dataFromAPICall[0].capitalizingFirstLetter())
                 self.userDefaults.setValue(dataFromAPICall[0], forKey: "FTIAjson")
                 self.userDefaults.synchronize()
