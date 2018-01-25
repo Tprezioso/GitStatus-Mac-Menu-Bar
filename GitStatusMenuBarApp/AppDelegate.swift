@@ -60,6 +60,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         return true
     }
     
+    // Mark: - Check to fire push notification
+    
     var countdownTimer: Timer!
     var totalTime = 10
     
